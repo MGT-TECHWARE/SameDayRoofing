@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark: #0C0C0C;
-  --color-charcoal: #161616;
-  --color-accent: #E53935;
-  --color-gold: #D4A843;
-  --color-cream: #F5F1EB;
-  --color-stone: #D6D0C4;
-  --color-muted: #8A8378;
+  --color-dark: #0A0908;
+  --color-charcoal: #1A1816;
+  --color-accent: #C62828;
+  --color-accent-deep: #8E1A1A;
+  --color-gold: #C9A84C;
+  --color-gold-light: #D4B86A;
+  --color-cream: #F4F0E8;
+  --color-warm: #EDE7DB;
+  --color-stone: #C8BFB0;
+  --color-muted: #7A7268;
+  --color-slate: #2C2824;
 
   --font-display: "Big Shoulders Display", sans-serif;
   --font-body: "DM Sans", sans-serif;
@@ -19,15 +23,42 @@
     background-color: var(--color-cream);
     color: var(--color-dark);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.025em;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .noise-overlay {
+    position: relative;
+  }
+
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
   }
 }

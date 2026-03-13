@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import {
   Menu, X, Phone, ShieldCheck,
   Zap, ArrowRight,
-  BadgeCheck, MapPin, Clock, Star, Mail
+  BadgeCheck, MapPin, Clock, Star, Mail, Facebook
 } from 'lucide-react';
 
 // Before & After images
@@ -43,6 +43,7 @@ const PHONE = '(832) 444-7725';
 const PHONE_TEL = 'tel:8324447725';
 const EMAIL = 'samedayroofing7@gmail.com';
 const ADDRESS = '9639 Hillcroft 803, Houston, TX 77096';
+const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61588463172888';
 
 const Logo = ({ size = 'default', dark = false }: { size?: 'default' | 'large'; dark?: boolean }) => (
   <a href="#" className="flex items-center group">
@@ -193,10 +194,10 @@ const Hero = () => (
           transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="text-xl md:text-2xl font-display text-cream/40 font-bold mb-3 tracking-wide">
-            WE STOP ROOF LEAKS
+            YOUR ROOF, OUR PRIORITY — FIXED TODAY, NOT TOMORROW
           </p>
           <p className="text-stone text-base md:text-base max-w-md md:mx-auto mb-8 md:mb-10 leading-relaxed">
-            Fast, reliable roof repairs for leaks, storm damage & urgent issues.
+            New roof installations, repairs, leaks & storm damage — handled same day.
             Serving Houston, TX and surrounding areas. Call now for immediate service.
           </p>
         </motion.div>
@@ -237,7 +238,7 @@ const Hero = () => (
         </span>
         <span className="hidden md:block w-1 h-1 rounded-full bg-cream/15" />
         <span className="flex items-center gap-2.5">
-          <BadgeCheck className="w-3.5 h-3.5 text-gold" /> Licensed & Insured
+          <Zap className="w-3.5 h-3.5 text-gold" /> New Roof Installation
         </span>
       </div>
     </div>
@@ -671,7 +672,7 @@ const Footer = () => (
             {[
               { icon: Clock, text: 'Same-Day Emergency Service' },
               { icon: ShieldCheck, text: 'Warranty on All Work' },
-              { icon: BadgeCheck, text: 'Licensed & Insured' },
+              { icon: Zap, text: 'New Roof Installation' },
               { icon: Star, text: 'Angie Leads, HomeAdvisor & Yelp' },
             ].map(({ icon: Icon, text }) => (
               <li key={text} className="flex items-center gap-3 text-sm text-cream/25">
@@ -686,6 +687,15 @@ const Footer = () => (
               <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
               <span>{ADDRESS}</span>
             </div>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-cream/20 hover:text-cream/50 transition-colors text-xs"
+            >
+              <Facebook className="w-3.5 h-3.5 flex-shrink-0" />
+              <span>Follow us on Facebook</span>
+            </a>
           </div>
         </div>
       </div>

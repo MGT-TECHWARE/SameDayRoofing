@@ -49,7 +49,7 @@ const Logo = ({ size = 'default', dark = false }: { size?: 'default' | 'large'; 
   <a href="#" className="flex items-center group">
     <img
       src={dark ? logoImageBlack : logoImage}
-      alt="Same Day Emergency Roofing Service — Houston, TX"
+      alt="Same Day Roof Repair — Houston, TX"
       className={`object-contain transition-transform duration-300 group-hover:scale-105 ${
         size === 'large' ? 'h-20' : 'h-12 md:h-14'
       }`}
@@ -249,7 +249,7 @@ const services = [
   { image: serviceReplacement, title: 'Replacement Roofs', desc: 'Complete roof replacement with quality materials and expert craftsmanship for Houston homes.' },
   { image: serviceMaintenance, title: 'Roof Maintenance', desc: "Regular maintenance to extend your roof's lifespan and prevent costly repairs." },
   { image: serviceStorm, title: 'Storm Damage Repair', desc: 'Fast response for hail, wind, and storm damage. We work with your insurance.' },
-  { image: serviceEmergency, title: 'Same-Day Emergency Service', desc: "We're there the same day you call. No waiting around for Houston's urgent roofing issues." },
+  { image: serviceEmergency, title: 'Same-Day Repair Service', desc: "We're there the same day you call. No waiting around for Houston's urgent roofing issues." },
   { image: serviceLeaks, title: 'We Stop Roof Leaks', desc: 'Expert leak detection and repair to keep your Houston home dry and protected.' },
   { image: serviceShingles, title: 'Missing Shingles', desc: 'Fast replacement of missing or damaged shingles to restore your roof.' },
   { image: serviceVents, title: 'Seal All Vents & Roof Jacks', desc: 'Professional sealing around all roof penetrations to prevent water entry.' },
@@ -272,7 +272,7 @@ const Services = () => (
           </h2>
         </div>
         <p className="text-muted text-base max-w-sm leading-relaxed md:pb-1">
-          From emergency leak repairs to full roof replacements, Houston homeowners trust us for fast, professional-grade quality.
+          From leak repairs to full roof replacements, Houston homeowners trust us for fast, professional-grade quality.
         </p>
       </div>
 
@@ -455,8 +455,8 @@ const BeforeAfter = () => (
 const reasons = [
   {
     icon: Zap,
-    title: 'Same-Day Emergency Service',
-    desc: "Roofing emergencies can't wait — especially in Houston weather. Call us and we'll be there the same day to assess and repair your roof.",
+    title: 'Same-Day Repair Service',
+    desc: "Roofing issues can't wait — especially in Houston weather. Call us and we'll be there the same day to assess and repair your roof.",
     stat: 'SAME',
     statSub: 'DAY',
   },
@@ -577,7 +577,7 @@ const ContactCTA = () => (
             transition={{ delay: 0.05 }}
             className="text-5xl md:text-7xl font-display font-extrabold text-white mb-6 leading-[0.9]"
           >
-            NEED EMERGENCY<br />ROOF REPAIR?
+            NEED SAME DAY<br />ROOF REPAIR?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -586,7 +586,7 @@ const ContactCTA = () => (
             transition={{ delay: 0.1 }}
             className="text-white/60 text-lg mb-12 max-w-md mx-auto leading-relaxed"
           >
-            Call us now for same-day emergency service. We'll get your roof fixed fast.
+            Call us now for same-day roof repair service. We'll get your roof fixed fast.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -620,7 +620,7 @@ const Footer = () => (
         <div className="md:col-span-5">
           <Logo size="large" />
           <p className="text-cream/30 text-sm leading-relaxed mt-6 mb-8 max-w-xs">
-            Same Day Emergency Roofing Service in Houston, TX. Fast, reliable roof repairs
+            Same Day Roof Repair in Houston, TX. Fast, reliable roof repairs
             for leaks, storm damage & urgent issues. Powered by Angie Leads, HomeAdvisor & Yelp.
           </p>
           <div className="space-y-4">
@@ -657,7 +657,7 @@ const Footer = () => (
             SERVICES
           </h4>
           <ul className="space-y-3">
-            {['Replacement Roofs', 'Roof Maintenance', 'Storm Damage Repair', 'Emergency Leak Repair', 'Missing Shingles', 'Vent & Flashing Sealing'].map((s) => (
+            {['Replacement Roofs', 'Roof Maintenance', 'Storm Damage Repair', 'Leak Repair', 'Missing Shingles', 'Vent & Flashing Sealing'].map((s) => (
               <li key={s} className="text-sm text-cream/25 hover:text-cream/50 transition-colors cursor-default">{s}</li>
             ))}
           </ul>
@@ -670,7 +670,7 @@ const Footer = () => (
           </h4>
           <ul className="space-y-4">
             {[
-              { icon: Clock, text: 'Same-Day Emergency Service' },
+              { icon: Clock, text: 'Same-Day Repair Service' },
               { icon: ShieldCheck, text: 'Warranty on All Work' },
               { icon: Zap, text: 'New Roof Installation' },
               { icon: Star, text: 'Angie Leads, HomeAdvisor & Yelp' },
@@ -703,7 +703,7 @@ const Footer = () => (
       {/* Copyright */}
       <div className="border-t border-cream/5 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-[11px] text-cream/15 tracking-wider">
-          &copy; {new Date().getFullYear()} Same Day Emergency Roofing Service. All rights reserved.
+          &copy; {new Date().getFullYear()} Same Day Roof Repair. All rights reserved.
         </p>
         <div className="flex items-center gap-6 text-[11px] text-cream/15 tracking-wider">
           <span>Privacy Policy</span>
